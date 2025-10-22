@@ -8,5 +8,5 @@ spec:
       properties:
         values:
           image:
-            repository: registry.gitlab.com/apobedenny/argocd-poc
-            tag: "CI-IMAGE-TAG-PLACEHOLDER"
+            repository: nginx
+            tag: "1.25-alpine"

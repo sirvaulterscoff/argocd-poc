@@ -9,11 +9,11 @@ spec:
       type: helm
       properties:
         repoType: "git"
-        url: "https://gitlab.ptsecurity.com/apobedenny/argocd-poc.git"   # заменить на ваш репо
+        url: "git@github.com:sirvaulterscoff/argocd-poc.git"   # заменить на ваш репо
         chart: "./charts/simple-app"
         git:
           branch: main
         values:
           image:
-            repository: registry.gitlab.com/<GROUP>/<REPO>  # туда будет пушиться образ из CI
+            repository: nginx
             tag: "v1"                                      # будет обновляться из kustomize overlay

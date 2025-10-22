@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://gitlab.ptsecurity.com/apobedenny/argocd-poc.git'
+    repoURL: 'git@github.com:sirvaulterscoff/argocd-poc.git'
     targetRevision: main
     path: 'kustomize/overlays/dev'
   destination:
