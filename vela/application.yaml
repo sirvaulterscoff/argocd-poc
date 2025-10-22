@@ -1,0 +1,19 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: simple-app-vela
+  namespace: default
+spec:
+  components:
+    - name: simple-app-helm
+      type: helm
+      properties:
+        repoType: "git"
+        url: "https://gitlab.ptsecurity.com/apobedenny/argocd-poc.git"   # заменить на ваш репо
+        chart: "./charts/simple-app"
+        git:
+          branch: main
+        values:
+          image:
+            repository: registry.gitlab.com/<GROUP>/<REPO>  # туда будет пушиться образ из CI
+            tag: "v1"                                      # будет обновляться из kustomize overlay
