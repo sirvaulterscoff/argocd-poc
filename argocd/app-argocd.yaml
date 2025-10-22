@@ -10,7 +10,7 @@ spec:
     targetRevision: main
     path: 'kustomize/overlays/dev'
   destination:
-    server: 'https://localhost'
+    server: 'https://kubernetes.default.svc'
     namespace: default
   syncPolicy:
     automated:
